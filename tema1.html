@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="styles/style.css">
+   <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Sanchez&display=swap" rel="stylesheet">
+   <script src="js/scripts.js"></script>
+   <title>Tema 1: Qué Necesitaremos</title>
+</head>
+<body>
+   <div id="cabecera">
+      <h1>Qué Necesitaremos</h1>
+   </div>
+   <!-- INICIO_LOADER -->
+   <div id="pageloader">
+      <img src="img/LogoOjo_FTA.png" class="spining" width="100px">
+   </div>
+   <!-- FIN_LOADER -->
+   <div id="contenido">
+      <h2>Objetivos</h2>
+      <p class="texto">
+         En este tema, instalaremos los paquetes necesarios para añadir esqueletos a nuestros <em>Sprites</em> e 
+         importaremos las imágenes del personaje que vamos a utilizar.
+      </p>
+      <h2>Instalación de Paquetes</h2>
+      <p class="texto">
+         Necesitamos instalar 2 packages (packages) para poder realizar la animación 2D usando huesos:
+         <strong>2D Animation y 2D PSD Importer</strong>.
+         <br><br>
+         Para ello iremos al menú principal y seleccionaremos <em>Window/Package Manager</em>.
+         <br><br>
+         Aquí nos aparecerán tanto los paquetes que tenemos instalados como todos aquellos paquetes disponibles para
+         nuestro proyecto. Los paquetes también podrían estar en revisión si la versión del propio paquete no 
+         estuviera totalmente liberada. Para que nos aparezcan en la lista de paquetes disponibles, tendremos que 
+         pinchar en <em>Advanced</em> y marcar la opción <em>Show Preview Packages</em>.
+      </p>
+      <p class="img_centrada"><img src="img/tema1/1-1.png" width="70%" alt=""></p>
+      <p class="texto">
+         El paquete <strong>2D Animation</strong> nos brinda todas las herramientas necesarias para la creación del
+         esqueleto.
+         <br><br>
+         El paquete <strong>2D PSD Importer</strong> lo utilizaremos cuando usemos un archivo de imágenes por capas
+         (.psd) que contendrá todas las partes de nuestro personaje montadas y posicionadas cada una en una capa
+         diferente.
+      </p>
+      <h2>Importar Nuestro Personaje</h2>
+      <p class="texto">
+         Lo primero que haremos será crearnos un archivo de imágenes con alguna aplicación que nos permita crear las
+         imágenes por capas. Para este tutorial hemos utilizado la herramienta <em>GIMP</em> ya que es gratuita. 
+         También podemos utilizar <em>Photoshop</em> si lo tenemos instalado.
+         <br><br>
+         Buscamos el personaje al que queremos articular.
+      </p>
+      <p class="nota">
+         Una página donde podéis descargaros <em>Sprites</em> de forma gratuita es
+         <a href="https://craftpix.net/freebies/">&emsp;https://craftpix.net/freebies/.</a>
+         Nos descargaremos uno que tenga las partes del cuerpo por separado.
+      </p>
+      <p class="img_centrada"><img src="img/tema1/1-2.png" width="60%" alt=""></p>
+      <p class="texto">
+         Abriremos <em>GIMP</em> y crearemos un archivo nuevo. Iremos abriendo capas sobre este archivo y metiendo en 
+         cada capa las partes del cuerpo por separado que previamente nos hemos descargado.
+      </p>
+      <p class="img_centrada"><img src="img/tema1/1-3.png" width="70%" alt=""></p>
+      <p class="texto">
+         Tenemos que colocarlas en el orden en el que luego queramos utilizar cada capa ya que Unity lo organiza por
+         este orden, aunque después es posible cambiarlo.
+         <br><br>
+         Una vez colocadas todas las capas, guardaremos el archivo como .XCF (formato de <em>GIMP</em>). Después 
+         podremos exportar este archivo desde <em>GIMP</em> a formato <em>Photoshop</em> (extensión .PSD).
+         <br><br>
+         Una vez que tenemos el archivo con extensión .PSD (ya sea exportado desde <em>GIMP</em> o creado 
+         en <em>Photoshop</em>) lo renombraremos a .PSB ya que éste es el formato que admite Unity. Al renombrarlo nos 
+         dirá que el archivo puede quedar inutilizado, pero lo renombramos igualmente.
+         <br><br>
+         Una vez que tengamos nuestro personaje en formato PSB. nos crearemos una carpeta en Unity a la que 
+         llamaremos <em>Sprites</em> y arrastramos el archivo a la carpeta de nuestro proyecto.
+         En ese momento, el paquete que instalamos anteriormente (2D PSD Importer) accederá a las capas y creará una 
+         imagen por cada capa del archivo usando el nombre que le hayamos puesto a cada capa como nombre de la imagen.
+      </p>
+      <p class="img_centrada"><img src="img/tema1/1-4.png" width="60%" alt=""></p>
+      <p class="texto">
+         Una vez importadas las imágenes, nos aparecerán los objetos por duplicado, pero no lo están, ya que cada uno 
+         tiene su función. Por ejemplo, con el brazo derecho, creará un <em>Game Object</em> (GO) que representa el 
+         brazo derecho y el otro objeto será la textura que tendrá dicho brazo.
+         <br><br>
+         Además, también se crea automáticamente un <em>Sprite Sheet</em> con todas las imágenes importadas.
+      </p>
+      <p class="img_centrada"><img src="img/tema1/1-5.png" width="20%" alt=""></p>
+      <p class="texto">
+         Una vez que ya tenemos nuestro personaje, lo seleccionamos y en el Inspector nos aparecerán las siguientes
+         opciones que tenemos que tener en cuenta:
+         <br><br>
+         - <strong>Pixels Per Unit</strong>: nos dará el tamaño de la imagen en el escenario. Si queremos que su
+         tamaño sea más pequeño, aumentaremos el valor y si lo queremos más grande, lo disminuiremos. Para poder ver
+         como queda, arrastraremos nuestro personaje a la escena y le daremos al botón <em>Apply</em> para ver los
+         cambios en el momento.
+         <br><br>
+         - <strong>Sprite Mode</strong>: tiene que estar en <em>Multiple</em> ya que nuestro personaje esa compuesto
+         de varias partes.
+         <br><br>
+         - <strong>Charácter Rig</strong>: esta opción tendrá que estar activada para poder realizar el esqueleto.
+      </p>
+      <p class="img_centrada"><img src="img/tema1/1-6.png" width="40%" alt=""></p>
+      <a class="texto volver" href="index.html">Volver al índice</a>
+   </div>
+   <div id="pie">
+      <h1> Fun Tech Academy - Calle Alcobendas, 23 Leganés 28914 Madrid - www.funtech.academy </h1>
+	</div>
+</body>
+</html>

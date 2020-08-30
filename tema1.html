@@ -28,17 +28,20 @@
       </p>
       <h2>Instalación de Paquetes</h2>
       <p class="texto">
-         Necesitamos instalar 2 packages (packages) para poder realizar la animación 2D usando huesos:
+         Necesitamos instalar 2 paquetes (packages) para poder realizar la animación 2D usando huesos:
          <strong>2D Animation y 2D PSD Importer</strong>.
          <br><br>
          Para ello iremos al menú principal y seleccionaremos <em>Window/Package Manager</em>.
          <br><br>
          Aquí nos aparecerán tanto los paquetes que tenemos instalados como todos aquellos paquetes disponibles para
-         nuestro proyecto. Los paquetes también podrían estar en revisión si la versión del propio paquete no 
+         nuestro proyecto. 
+      </p>
+      <p class="img_centrada"><img src="img/tema1/1-1.png" width="70%" alt=""></p>
+      <p class="texto">
+         Los paquetes también podrían estar en revisión si la versión del propio paquete no 
          estuviera totalmente liberada. Para que nos aparezcan en la lista de paquetes disponibles, tendremos que 
          pinchar en <em>Advanced</em> y marcar la opción <em>Show Preview Packages</em>.
       </p>
-      <p class="img_centrada"><img src="img/tema1/1-1.png" width="70%" alt=""></p>
       <p class="texto">
          El paquete <strong>2D Animation</strong> nos brinda todas las herramientas necesarias para la creación del
          esqueleto.
@@ -57,7 +60,7 @@
       </p>
       <p class="nota">
          Una página donde podéis descargaros <em>Sprites</em> de forma gratuita es
-         <a href="https://craftpix.net/freebies/">&emsp;https://craftpix.net/freebies/.</a>
+         <a href="https://craftpix.net/freebies/">https://craftpix.net/freebies/.</a>
          Nos descargaremos uno que tenga las partes del cuerpo por separado.
       </p>
       <p class="img_centrada"><img src="img/tema1/1-2.png" width="60%" alt=""></p>
@@ -65,7 +68,7 @@
          Abriremos <em>GIMP</em> y crearemos un archivo nuevo. Iremos abriendo capas sobre este archivo y metiendo en 
          cada capa las partes del cuerpo por separado que previamente nos hemos descargado.
       </p>
-      <p class="img_centrada"><img src="img/tema1/1-3.png" width="70%" alt=""></p>
+      <p class="img_centrada"><img src="img/tema1/1-3.png" width="80%" alt=""></p>
       <p class="texto">
          Tenemos que colocarlas en el orden en el que luego queramos utilizar cada capa ya que Unity lo organiza por
          este orden, aunque después es posible cambiarlo.
@@ -82,15 +85,19 @@
          En ese momento, el paquete que instalamos anteriormente (2D PSD Importer) accederá a las capas y creará una 
          imagen por cada capa del archivo usando el nombre que le hayamos puesto a cada capa como nombre de la imagen.
       </p>
-      <p class="img_centrada"><img src="img/tema1/1-4.png" width="60%" alt=""></p>
+      <p class="img_centrada"><img src="img/tema1/1-4.png" width="70%" alt=""></p>
       <p class="texto">
-         Una vez importadas las imágenes, nos aparecerán los objetos por duplicado, pero no lo están, ya que cada uno 
-         tiene su función. Por ejemplo, con el brazo derecho, creará un <em>Game Object</em> (GO) que representa el 
-         brazo derecho y el otro objeto será la textura que tendrá dicho brazo.
+         Una vez importadas las imágenes, en la parte de abajo a la derecha hay un pequeño deslizador para ver lo 
+         importado más grande o más pequeño. Si lo vemos lo as pequeño posible, veremos una jerarquía con sus nombres 
+         y tipos de objeto.
+         <br><br>
+         Aquí, aparecerán los objetos por duplicado, pero no lo están, ya que cada uno tiene su función. Por ejemplo, 
+         con el brazo derecho, creará un <em>Game Object</em> (GO) que representa el brazo derecho y el otro objeto 
+         será la textura que tendrá dicho brazo.
          <br><br>
          Además, también se crea automáticamente un <em>Sprite Sheet</em> con todas las imágenes importadas.
       </p>
-      <p class="img_centrada"><img src="img/tema1/1-5.png" width="20%" alt=""></p>
+      <p class="img_centrada"><img src="img/tema1/1-5.png" width="15%" alt=""></p>
       <p class="texto">
          Una vez que ya tenemos nuestro personaje, lo seleccionamos y en el Inspector nos aparecerán las siguientes
          opciones que tenemos que tener en cuenta:

@@ -9,11 +9,11 @@
    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Sanchez&display=swap" rel="stylesheet">
    <script src="js/scripts.js"></script>
-   <title>Tema 1: El Esqueleto</title>
+   <title>Tema 2: Dando Forma al Esqueleto</title>
 </head>
 <body>
    <div id="cabecera">
-      <h1>El Esqueleto</h1>
+      <h1>Dando Forma al Esqueleto</h1>
    </div>
    <!-- INICIO_LOADER -->
    <div id="pageloader">
@@ -29,49 +29,84 @@
       <h2>Empezando a Crear el Esqueleto</h2>
       <p class="texto">
          Vamos a crear el esqueleto del personaje. Para ello, seleccionaremos a nuestro personaje de la carpeta de
-         <em>Sprites</em> y en el <em>Inspector</em> pulsaremos el botón de <em>Sprite Editor<em>. Lo primero que
-         vemos es el <em>Sprite Sheet<em> que se creó automáticamente con el <em>Package 2D PSD Importer<em>.
+         <em>Sprites</em> y en el <em>Inspector</em> pulsaremos el botón de <em>Sprite Editor</em>. Lo primero que
+         vemos es el <em>Sprite Sheet</em> que se creó automáticamente con el <em>Package 2D PSD Importer</em>.
       </p>
       <p class="img_centrada"><img src="img/tema2/2-1.png" width="15%" alt=""></p>
       <p class="texto">
-         -------------------------------------------------------------------------
+         Seleccionaremos <em>Sprite Editor</em> y nos aparecerá un desplegable donde seleccionaremos 
+         <em>Skinning Editor</em>. En la parte superior a la derecha tenemos la opción <em>Visibility</em> dividida 
+         en dos partes, <em>Bone</em> y <em>Sprite</em>. 
+      </p>
+      <p class="img_centrada"><img src="img/tema2/2-2.png" width="70%" alt=""></p>
+      <p class="texto">
+         Si seleccionamos <em>Bone</em> de momento no nos aparece nada ya que aquí aparecerán los huesos que creemos,
+         pero si seleccionamos <em>Sprite</em> nos aparecerán las distintas partes del cuerpo del personaje. Si hay 
+         alguna parte que no queramos que se vea, podemos ocultarla.
          <br><br>
-         Seleccionar <em>Sprite Editor</em> y nos saldrá un desplegable donde seleccionaremos <em>Skinning Editor</em>.
-         En la parte de arriba a la derecha tenemos una opción Visibility divididas en Bone y Sprite. 
+         En <em>Visibility</em> tenemos también dos deslizadores que tendrán su utilidad más adelante:
          <br><br>
-         Si seleccionamos Bone de momento no nos aparece nada ya que no hay ningún hueso pero si seleccionamos Sprite nos aparecerán los sprites que tenemos. Podemos esconderlos………
+         •  Uno para ver la visibilidad de los huesos.
          <br><br>
-         <strong>AÑADIR IMAGEN</strong>
+         •  Otro para ver la visibilidad de los <em>Sprites</em> (mallas).
       </p>
-      <p class="img_centrada"><img src="img/tema2/2-.png" width="15%" alt=""></p>
       <p class="texto">
-         También en Visibility tenemos dos deslizadores:
-         •  Para ver la visibilidad de los huesos.
-         •  Para ver la visibilidad de los Sprites mallas.
-         Nos aparecerán 3 opciones: Bones, Geometry y Weights que iremos viendo poco a poco.
+         En la parte de la izquierda, nos aparecen tres zonas diferenciadas, que iremos viendo poco a poco:
+         <br><br>
+         •  <em>Bones</em>
+         <br><br>
+         •  <em>Geometry</em>
+         <br><br>
+         •  <em>Weights</em>
       </p>
-      <h1>Bones (Huesos)</h1>
+      <h2>Creamos el Esqueleto</h2>
       <p class="texto">
-         Create bone: Esta opción es la que usaremos para crear los huesos.
-         •  Si acercamos el puntero a nuestro personaje aparecerá un punto rojo y pulsando y arrastrando con el click izquierdo creara el hueso.
-         •  Ese punto rojo será el centro de la rotación de nuestro hueso.
-         Hueso principal que será el Cuerpo.
-         •  Selecciono la parte de abajo del cuerpo y subo el ratón hasta el extremo superior y doy click para finalizar.
+         Según hemos visto en el punto anterior, en la parte de la izquierda del <em>Sprite Editor</em> tenemos una 
+         zona <em>Bones</em> (Huesos) donde daremos forma a nuestro esqueleto. Dentro de esta zona tenemos cuatro opciones.
       </p>
-      <p class="img_centrada"><img src="img/tema2/2-.png" width="15%" alt=""></p>
+      <h3>Create Bone</h3>
       <p class="texto">
-         A medida que vamos creando huesos aparecerán en Visibility/Bone.
-         •  Si sigo arrastrando el ratón desde el último punto aparecerá un línea amarilla para hacer otro hueso que dependa del anterior.
+         Esta opción es la que usaremos para crear los huesos. Para crear un hueso hacemos lo siguiente:
+         <br><br>
+         Acercamos el puntero a nuestro personaje y aparecerá un punto rojo. Donde pinchemos, empezará el hueso y será 
+         el centro de la rotación de nuestra articulación. Movemos el ratón hasta donde queramos que termine el hueso y 
+         volvemos a pinchar para crearlo.
+         <br><br>
+         Empezaremos por el hueso principal que será el del cuerpo. Pinchamos en la parte de abajo (que será nuestro 
+         eje de rotación) y subiremos el ratón hasta el extremo superior, dando click para finalizar.
       </p>
-      <p class="img_centrada"><img src="img/tema2/2-.png" width="15%" alt=""></p>
+      <p class="img_centrada"><img src="img/tema2/2-3.png" width="25%" alt=""></p>
+
       <p class="texto">
-         •  Podríamos hacer unido con el cuerpo el hueso de la Cabeza.
+         A medida que vayamos creando huesos, aparecerán en la parte <em>Visibility</em> de la derecha de la pantalla dentro 
+         de la zona <em>Bone</em>. Lo ideal sería ir cambiando el nombre de los huesos según los vayamos creando para saber 
+         siempre el hueso que estamos tocando.
+         <br><br>
+         Si sigo arrastrando el ratón desde donde terminó el último hueso creado, empezaremos otro hueso que dependerá
+         del anterior.
       </p>
-      <p class="img_centrada"><img src="img/tema2/2-.png" width="15%" alt=""></p>
+      <p class="img_centrada"><img src="img/tema2/2-4.png" width="25%" alt=""></p>
       <p class="texto">
-         Si ya no quiero poner más huesos pulsaría el botón derecho del ratón.
-         Observamos que en el menú de Visibility el Cuerpo tiene un hijo. Se pueden ir cambiando los nombres de los huesos para verlo más claro.
-         Si los puntos de rotación no nos han quedado muy bien seleccionarlo con Edit Bone el punto podemos arrastrarlo a la posición correcta.
+         Podríamos crear el hueso de la cabeza unido y dependiente del hueso del cuerpo.
+      </p>
+      <p class="img_centrada"><img src="img/tema2/2-5.png" width="25%" alt=""></p>
+      <p class="texto">
+         Al crear los huesos dependientes, podemos observar como en el menú <em>Visibility</em> el hueso del cuerpo tiene al 
+         hueso de la cabeza como dependiente o hijo.
+      </p>
+      <p class="texto">
+         Cuando no queramos poner más huesos (dependientes o no) pulsamos el botón derecho del ratón o la tecla escape.
+      </p>
+      <h3>Edit Bone</h3>
+
+
+
+         <br><br>
+         <br><br>
+
+         
+
+Si los puntos de rotación no nos han quedado muy bien seleccionarlo con Edit Bone el punto podemos arrastrarlo a la posición correcta.
          Hacemos ahora los huesos de los Brazos:
          Quiero que el brazo quiero que se mueva cada vez que gire o se mueva el cuerpo así que el brazo tiene que ser hijo del cuerpo:
          •  Acordarse de seleccionar Create Bone para poder crearlo. Así que selecciono el punto de rotación del cuerpo y lo arrastro hasta donde quiero que sea el punto de rotación del brazo izquierdo (hacia el hombro) de ahí vamos al codo, otro hasta la muñeca y luego hasta la mano.
@@ -93,12 +128,18 @@
       </p>
       <p class="img_centrada"><img src="img/tema2/2-.png" width="15%" alt=""></p>
       <p class="texto">
+
+      <h3>Split Bone</h3>
+
          Otra opción dentro de Bones es Split Bone que nos ayudara a dividir huesos:
          •  Seleccionamos un hueso y pulsamos ese botón y volvemos al hueso vemos que aparece un punto que se va moviendo con el ratón. Con el ratón izquierdo se acepta y con el derecho se cancela.
       </p>
       <p class="img_centrada"><img src="img/tema2/2-.png" width="15%" alt=""></p>
       <p class="texto">
          Para añadir otra articulación donde la necesitemos.
+
+      <h3>Preview Pose</h3>
+
          Una vez hecho los huesos que necesitamos activamos el Preview Pose:
          •  Si selecciono el hueso del brazo y lo muevo con el botón izquierdo del ratón vemos que se rota el hueso del antebrazo.
       </p>

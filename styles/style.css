@@ -59,8 +59,18 @@ div#contenido
 div#contenido>h2
 {
    margin: 0px;
-   padding: 45px;
+   padding: 30px;
    font-size: 2.5em;
+   font-family: 'Barlow Semi Condensed';
+   color: rgba(68,117,255,1);
+}
+
+div#contenido>h3
+{
+   margin: 0px;
+   padding: 45px;
+   margin-left: 15px;
+   font-size: 2em;
    font-family: 'Barlow Semi Condensed';
    color: rgba(68,117,255,1);
 }
